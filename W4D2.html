@@ -1,0 +1,42 @@
+<html> 
+  <head> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script> 
+    $(function(){
+      $("#navbar").load("navbar.html"); 
+    });
+    </script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style type="text/css">
+      #margin {
+        margin: 2cm 4cm 3cm 4cm;
+      }
+    </style>
+  </head> 
+  <body> 
+ <div id="navbar"></div>
+ <div id="margin">
+ <center><h3>Today's Agenda</h3></center><ul>
+  <li>4:00 <a href="https://www.codecademy.com/learn/javascript"> Codecademy JavaScript</a></li>
+  <li> 4:45 Add atleast one JavaScript question to this <a href="https://docs.google.com/forms/d/e/1FAIpQLSekqHXQc2IWjIePeQI0QXntuGBUUlBEVjMrh_3Q6YsDkM68JA/viewform?usp=sf_link">form</a></li>
+  <li>5:00 JavaScript Q/A</li>
+ </ul>
+
+  </div>
+  </body>
+  <script type="text/javascript">
+    var setAlarm1Hour = "17"; //14:00, 2:00 PM
+    var setAlarm1Min = "50";
+    var int1 = setInterval(function(){
+    var currentHour = new Date().getHours();
+    var currentMin = new Date().getMinutes();
+        if(currentHour >= setAlarm1Hour && currentMin >= setAlarm1Min ){
+            $('#margin').html(" Class is ending soon. Please pack up.");
+            clearInterval(int1);
+            //call to function to trigger : triggerFunction();
+        }
+    },1000)
+  </script> 
+</html>
