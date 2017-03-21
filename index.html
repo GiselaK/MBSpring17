@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head> 
@@ -9,7 +8,15 @@
     $(function(){
       $("#navbar").load("navbar.html"); 
     });
-    </script> 
+    var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+    var firstDate = new Date(2017,04,05);
+    var secondDate = new Date();
+    var weeks = Math.round((firstDate-secondDate)/ 604800000);
+    var diffDays =  Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay))) - (weeks*7);
+
+    var untilDemo = document.getElementByID('#untilDemoDay')
+    untilDemo.innerHTML = "\(weeks) and \(diffDays) until Demo Day!";
+    </script>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <style type="text/css">
       #margin {
@@ -19,37 +26,29 @@
   </head> 
 <body>
 <div id="navbar"></div>
+<div id="untilDemoDay" class="brand"></div>
  <div id="margin">
- 4:00 Warm-up (If you have not reached for loops or this is too hard continue codecademy) <br>
+  4:00 Warm-up (If you have not reached for loops or this is too hard continue codecademy) <br>
 
- Create a <b> function </b> named greatestNumber that when given an array of numbers returns the greatestNymber.
+ Create a <b> function </b> named longestWord that when given a string returns the longest word in the string.
 
- Example of how greatestNumber should work:
+ Example of how longestWord should work:
  <pre>
-   greatestNumber([1,2,7]) --> 7
-   greatestNumber([9,1,38,4]) --> 38
-   greatestNumber([6,2,3]) ---> 6
+   longestWord("My monkey hates bananas") --> "bananas"
+   longestWord("Programming is dope") --> "Programming"
+   longestWord("Spring break is next week :)") ---> "Spring"
+
  </pre>
 
-  4:30 Create a GitHub respository for your project and add your team members.
+  4:45 Go over the warm-up
+<br><br>
+  5:00 
 
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfUAn1D6hN8IqBB74Qj8qWis-gd9YcJiWQScduDu4dJAP4gA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-  
-  After you're done creating a Github repo
+  Emag and calendar app group: I sent you resources based on what you submitted in the WAT U WANNA LEARN form. 
 
-  <b>Game Builders:</b> Start trying to build the floor and other aspects of your game based on the code from the example <br>
+  If any group is uncertain what to do please grab me or any volunteer!
 
-  <b>Web App Ppls:</b>
-
-  <br> Front-End developers: 
-   Continue playing around with HTML and Bootstrap. Try to build out a template of what you want your app to look like. Ask me or one of the lovely volunteers any HTML or Bootstrap questions you may have. <br>
-
-  <br> Back-End developers:
-  Elias
-<!--   4:30 Github</li>
-  <a href="https://help.github.com/articles/create-a-repo/"> Create a Github repository</a> for your project. Github will be where all of your code from each team member is stored. </li> -->
-
-  </div>
+  Any groups feel free to repost to the <a href="https://docs.google.com/forms/d/e/1FAIpQLScfUAn1D6hN8IqBB74Qj8qWis-gd9YcJiWQScduDu4dJAP4gA/viewform?usp=sf_link"> WAT YOU WANNA LEARN</a> form at any point in the week and I will slack or tell you in class ASAP.
 
  </div>
 </body>
