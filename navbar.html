@@ -42,16 +42,3 @@
   <button type="button" class="btn btn-outline-primary navbar-text"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdXCLWQfRTw7jykMAm2i0FbsBCzPZLSovhkqVVPdbNz4ZI75g/viewform"> Provide Class Feedback (Press Me!!) </a></button>
   <a id="untilDemoDay" class="jumbotron" href="#">Project name</a>
 </nav>
-<script> 
-$(function(){
-  $("#navbar").load("navbar.html"); 
-});
-var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-var firstDate = new Date(2017,04,05);
-var secondDate = new Date();
-var weeks = Math.round((firstDate-secondDate)/ 604800000);
-var diffDays =  Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay))) - (weeks*7);
-
-var untilDemo = document.getElementById('untilDemoDay')
-untilDemo.innerHTML = "\(weeks) and \(diffDays) until Demo Day!";
-</script> 
