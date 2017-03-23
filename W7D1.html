@@ -14,9 +14,9 @@
     var weeks = Math.round((firstDate-secondDate)/ 604800000);
     var diffDays =  Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay))) - (weeks*7);
 
-    var untilDemo = document.getElementByID('untilDemoDay')
+    var untilDemo = document.getElementByID('#untilDemoDay')
     untilDemo.innerHTML = "\(weeks) and \(diffDays) until Demo Day!";
-    </script> 
+    </script>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <style type="text/css">
       #margin {
@@ -26,30 +26,29 @@
   </head> 
 <body>
 <div id="navbar"></div>
+<div id="untilDemoDay" class="brand"></div>
  <div id="margin">
-  4:00 Warm-up (If this is too hard continue codecademy) <br>
+  4:00 Warm-up (If you have not reached for loops or this is too hard continue codecademy) <br>
 
-  Create a <b> function </b> named remainder that when given two numbers, returns the remainder. 
+ Create a <b> function </b> named longestWord that when given a string returns the longest word in the string.
 
-  (Hint: modulo (%) returns the remainder
-
-    16%5 === 1  // true
-  )
-
- Example of how remainder should work:
+ Example of how longestWord should work:
  <pre>
-   remainder(16,5) --> 1
-   remainder(32,16) --> 0
-   remainder(12,5) ---> 2
- </pre>
- 
- Bonus: Modify this function to return whether or not there is a remainder:
+   longestWord("My monkey hates bananas") --> "bananas"
+   longestWord("Programming is dope") --> "Programming"
+   longestWord("Spring break is next week :)") ---> "Spring"
 
- <pre>
-    remainder(16,5) --> true
-    remainder(32,16) --> false
-    remainder(12,5) --> true
  </pre>
+
+  4:45 Go over the warm-up
+<br><br>
+  5:00 
+
+  Emag and calendar app group: I sent you resources based on what you submitted in the WAT U WANNA LEARN form. 
+
+  If any group is uncertain what to do please grab me or any volunteer!
+
+  Any groups feel free to repost to the <a href="https://docs.google.com/forms/d/e/1FAIpQLScfUAn1D6hN8IqBB74Qj8qWis-gd9YcJiWQScduDu4dJAP4gA/viewform?usp=sf_link"> WAT YOU WANNA LEARN</a> form at any point in the week and I will slack or tell you in class ASAP.
 
  </div>
 </body>
