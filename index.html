@@ -14,9 +14,8 @@
   </head> 
   <script> 
 $(function(){
-  $("#navbar").load("navbar.html"); 
-});
-var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+  $("#navbar").load("navbar.html").then(function () {
+    var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
 var firstDate = new Date(2017,04,05);
 var secondDate = new Date();
 var weeks = Math.round((firstDate-secondDate)/ 604800000);
@@ -25,10 +24,12 @@ var diffDays =  Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())
 var untilDemo = document.getElementById('untilDemoDay')
 untilDemo.innerHTML = weeks + " weeks and "
  diffDays + " days until Demo Day!";
+  }) 
+});
+
 </script> 
 <body>
 <div id="navbar"></div>
-<a id="untilDemoDay" class="jumbotron">Time Left Loading...</a>
  <div id="margin">
   4:00 Warm-up (If this is too hard continue codecademy) <br>
 
